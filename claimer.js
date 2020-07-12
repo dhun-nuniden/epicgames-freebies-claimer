@@ -24,7 +24,7 @@ function isUpToDate() {
     });
 }
 
-async function freeGamesPromotions(client, country = "US", allowCountries = "US", locale = "en-US") {
+async function freeGamesPromotions(client, country = "DE", allowCountries = "DE", locale = "de-de") {
     let { data } = await client.freeGamesPromotions(country, allowCountries, locale);
     let { elements } = data.Catalog.searchStore;
     let free = elements.filter(offer => offer.promotions
