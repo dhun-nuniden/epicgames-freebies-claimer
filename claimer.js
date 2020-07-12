@@ -89,7 +89,8 @@ async function freeGamesPromotions(client, country = "US", allowCountries = "US"
 
             let { country } = client.account.country;
             let freePromos = await freeGamesPromotions(client, country, country);
-
+            Logger.info(`Country: ${client.account.country}`);
+            
             for (let offer of freePromos) {
                 try {
                     let purchased = await client.purchase(offer, 1);
